@@ -1,0 +1,79 @@
+:root {
+  --primary-text-colour: #757575;
+  --title-text-colour: #212121;
+  --accent-colour: #2196f3;
+}
+
+body {
+  background-color: #e5e5e5;
+  color: var(--primary-text-colour);
+}
+
+/* logo */
+.logo {
+  color: var(--accent-colour);
+}
+
+.logo:focus,
+.logo-2:focus {
+  color: var(--accent-colour);
+}
+
+.logo-2 {
+  color: var(--title-text-colour);
+}
+.logo-2:hover {
+  color: var(--accent-colour);
+}
+
+ul {
+  list-style: none;
+}
+
+/* site-nav */
+
+.site-nav .link {
+  color: var(--title-text-colour);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-colour);
+}
+
+.auth-nav .link {
+  color: var(--primary-text-colour);
+}
+.auth-nav .link:hover,
+.auth-nav .link:focus {
+  color: var(--accent-colour);
+}
+
+/* hero */
+.hero-title {
+  color: #ffffff;
+}
+
+/* section */
+.section-title {
+  color: var(--title-text-colour);
+}
+
+.section-name {
+  color: var(--title-text-colour);
+}
+
+/* feature */
+.feature-list .title {
+  color: var(--title-text-colour);
+}
+
+/* Button */
+
+.button {
+  color: #ffffff;
+  background-color: var(--accent-colour);
+  font-size: 24px;
+  padding: 12px 24px;
+  display: inline-block;
+  border: 1px solid black;
+}
