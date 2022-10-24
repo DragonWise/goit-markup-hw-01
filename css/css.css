@@ -21,7 +21,6 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 95px;
   outline: 2px solid tomato;
   width: 1200px;
   padding-left: 15px;
@@ -110,6 +109,17 @@ ul {
 }
 
 /* section */
+.section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background-color: #555;
+}
+
+.section.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -121,6 +131,8 @@ ul {
 }
 
 .section-name {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--title-text-colour);
   font-weight: 500;
   font-size: 16px;
@@ -129,6 +141,8 @@ ul {
 }
 
 .section-prof {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -139,6 +153,7 @@ ul {
 .feature-list {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
 .title {
