@@ -13,6 +13,26 @@ body {
   line-height: 1.71;
 }
 
+/* container */
+.container.first {
+  margin-bottom: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 95px;
+  outline: 2px solid tomato;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* page-header */
+.page-header {
+  background: #ffffff;
+}
+
 /* logo */
 .logo {
   color: var(--accent-colour);
@@ -66,22 +86,33 @@ ul {
   color: var(--accent-colour);
 }
 
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 /* hero */
 .hero {
+  outline: 2px solid red;
   letter-spacing: 0.06em;
+  text-align: center;
 }
 
 .hero-title {
+  margin-bottom: 30px;
+  margin-top: 0;
   color: #ffffff;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   text-transform: uppercase;
 }
 
 /* section */
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   color: var(--title-text-colour);
   font-weight: 700;
   font-size: 36px;
@@ -105,7 +136,14 @@ ul {
 }
 
 /* feature */
-.feature-list .title {
+.feature-list {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--title-text-colour);
   font-weight: 700;
   font-size: 14px;
@@ -114,18 +152,26 @@ ul {
   text-transform: uppercase;
 }
 
+.title-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* Button */
 
 .button {
-  color: #ffffff;
-  background-color: var(--accent-colour);
-  padding: 12px 24px;
   display: inline-block;
+  color: #ffffff;
+  background: #2196f3;
   border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  width: 201px;
+  height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  align-items: center;
+  vertical-align: middle;
   text-align: center;
   text-decoration: none;
 }
