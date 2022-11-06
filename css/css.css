@@ -190,7 +190,11 @@ ul {
 }
 
 .flex-element {
-  width: 270px;
+  width: calc((100% - 90px) / 4);
+}
+
+.work-item {
+  width: calc((100% - 60px) / 3);
 }
 
 .title {
