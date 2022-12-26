@@ -25,7 +25,6 @@ body {
   height: 60px;
   align-items: center;
   margin-bottom: 0;
-  
 }
 
 .container {
@@ -40,7 +39,7 @@ body {
 /* page-header */
 .page-header {
   background: #ffffff;
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-flex {
@@ -113,8 +112,8 @@ ul {
 }
 
 .auth-nav .link {
-  display: block;
-
+  display: flex;
+align-items: center;
   color: var(--primary-text-colour);
   font-weight: 500;
   font-size: 14px;
@@ -135,12 +134,47 @@ ul {
   margin-right: 40px;
 }
 
+.mailto::before {
+  content: '';
+  background-image: url(../image/envelope.png);
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.tel::before {
+  content: '';
+  background-image: url(../image/smartphone.svg);
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} 
+
+
 /* hero */
 .hero {
   outline: 2px solid red;
   letter-spacing: 0.06em;
   text-align: center;
   background-color: #000;
+  padding-top: 200px;
+   max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../image/Header\ img.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -175,26 +209,24 @@ ul {
 }
 
 .section-name {
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
   color: var(--title-text-colour);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 .section-prof {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 .section.command {
-background-color: #F5F4FA;
+  background-color: #f5f4fa;
 }
 
 /* feature */
@@ -203,26 +235,89 @@ background-color: #F5F4FA;
   margin-bottom: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.feature-list img{
- padding-bottom: 0;
+.feature-list img {
+  padding-bottom: 0;
   margin-bottom: 0px;
   vertical-align: bottom;
 }
 
-.fone {
-  width: 270px;
-  height: 120px;
-  background-color: #f5f4fa;
-  padding: 25px 102px;
-  margin-bottom: 30px;
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  width: 206px;
+  height: 44px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-logo {
+  height: 44px;
+  width: 44px;
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.insta {
+  background-image: url(../image/social_networks/instagram\ 2.png);
+}
+
+.twitter {
+  background-image: url(../image/social_networks/twitter\ 1.png);
+}
+
+.facebook {
+  background-image: url(../image/social_networks/facebook\ 1.png);
+}
+
+.linkedin {
+  background-image: url(../image/social_networks/linkedin\ 1.png);
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
 }
 
 .flex-element {
   width: calc((100% - 90px) / 4);
+}
+
+.flex-element::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-color: #f5f4fa;
+  padding: 25px 102px;
+  margin-bottom: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-group::before {
+  background-image: url(../image/Group.png);
+}
+
+.icon-clock::before {
+  background-image: url(../image/clock\ 1.png);
+}
+
+.icon-diagram::before {
+  background-image: url(../image/diagram\ 1.png);
+}
+
+.icon-astronaut::before {
+  background-image: url(../image/astronaut\ 1.png);
 }
 
 .work-item {
@@ -353,4 +448,4 @@ background-color: #F5F4FA;
 .join .title {
   color: #fff;
   margin-bottom: 20px;
-  }
+}
