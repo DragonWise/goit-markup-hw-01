@@ -136,7 +136,7 @@ align-items: center;
 
 .mailto::before {
   content: '';
-  background-image: url(../image/envelope.png);
+  background-image: url(../image/envelope.svg);
   width: 16px;
   height: 12px;
   margin-right: 10px;
