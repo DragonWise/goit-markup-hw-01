@@ -124,9 +124,14 @@ ul {
 
 .auth-nav .link:hover,
 .auth-nav .link:focus,
-.site-nav .link:hover,
-.site-nav .link:focus {
+.auth-nav .link:hover,
+.auth-nav .link:focus,
+.auth-nav .link:hover .envelope,
+.auth-nav .link:focus .envelope,
+.auth-nav .link:hover .smartphone,
+.auth-nav .link:focus .smartphone {
   color: var(--accent-colour);
+  fill: #2196f3;
 }
 
 .site-nav .item:not(:last-child),
@@ -134,7 +139,21 @@ ul {
   margin-right: 40px;
 }
 
-.mailto::before {
+.envelope {
+  width: 16px;
+  height: 11px;
+  color: currentColor;
+  margin-right: 10px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 15px;
+  color: currentColor;
+  margin-right: 10px;
+}
+
+/* .mailto::before {
   content: '';
   background-image: url(../image/envelope.svg);
   width: 16px;
@@ -143,11 +162,9 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: currentColor;
-}
+} */
 
-
-.tel::before {
+/* .tel::before {
   content: '';
   background-image: url(../image/smartphone.svg);
   width: 10px;
@@ -156,11 +173,10 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 /* hero */
 .hero {
-  outline: 2px solid red;
   letter-spacing: 0.06em;
   text-align: center;
   background-color: #000;
@@ -238,11 +254,11 @@ ul {
   justify-content: space-between;
 }
 
-.feature-list img {
+/* .feature-list img {
   padding-bottom: 0;
   margin-bottom: 0px;
   vertical-align: bottom;
-}
+} */
 
 .social {
   display: flex;
@@ -257,27 +273,26 @@ ul {
 }
 
 .social-logo {
+  height: 20px;
+  width: 20px;
+  fill: #afb1b8;
+}
+
+.social-item {
+  display: flex;
   height: 44px;
   width: 44px;
-  background-position: center;
-  background-size: 20px;
-  background-repeat: no-repeat;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
-.insta {
-  background-image: url(../image/social_networks/instagram\ 2.png);
+.social-item:hover {
+  background-color: #2196f3;
 }
 
-.twitter {
-  background-image: url(../image/social_networks/twitter\ 1.png);
-}
-
-.facebook {
-  background-image: url(../image/social_networks/facebook\ 1.png);
-}
-
-.linkedin {
-  background-image: url(../image/social_networks/linkedin\ 1.png);
+.social-item:hover .social-logo {
+  fill: #fff;
 }
 
 .feature-card {
@@ -371,14 +386,17 @@ ul {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.client-item {
+.client-link {
   width: 170px;
   height: 90px;
-  border: 1px solid #afb1b8;
-  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: #afb1b8;
+}
+
+.client-link:hover {
+  fill: #2196f3;
 }
 
 /* Button */
