@@ -252,6 +252,7 @@ ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* .feature-list img {
@@ -356,26 +357,14 @@ ul {
 }
 
 .note {
+  position: relative;
   width: 370px;
   height: 294px;
-
-  display: flex;
-  align-items: flex-end;
-}
-
-.note.one {
-  background: url(/image/box\ 1.jpg);
-}
-
-.note.two {
-  background: url(/image/box\ 2.jpg);
-}
-
-.note.three {
-  background: url(/image/box\ 3.jpg);
 }
 
 .note .title {
+  position: absolute;
+  bottom: 0;
   width: 370px;
   color: #fff;
   margin-bottom: 0;
