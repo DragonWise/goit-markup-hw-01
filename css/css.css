@@ -19,6 +19,43 @@ body {
   list-style: none;
 }
 
+.studio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #2196f3;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+
+.studio:hover::after {
+  opacity: 1;
+}
+
+.portfolio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #2196f3;
+  border-radius: 2px;
+  transform: scaleX(0);
+
+  transition: transform 250ms linear;
+}
+
+.portfolio:hover::after {
+  transform: scaleX(1);
+}
+
 /* container */
 .container.first {
   display: flex;
@@ -102,7 +139,8 @@ ul {
 
 .site-nav .link {
   display: block;
-
+  position: relative;
+  padding: 23px 0px;
   color: var(--title-text-colour);
   font-weight: 500;
   font-size: 14px;
