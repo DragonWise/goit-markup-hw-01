@@ -338,6 +338,23 @@
             </a>
           </div>
         </div>
+        <form class="js-speaker-form">
+          <label for="name">Ім'я</label>
+          <input type="text" name="user-name" id="name" />
+          <br />
+          <button type="submit">Залишити заявку</button>
+        </form>
+        <script>
+          (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+              e.preventDefault();
+
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`)
+              );
+            });
+          })();
+        </script>
       </footer>
     </section>
   </body>
