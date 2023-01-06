@@ -62,7 +62,7 @@
           ЕФЕКТИВНІ РІШЕННЯ <br />
           ДЛЯ ВАШОГО БІЗНЕСУ
         </h1>
-        <a href="" type="button" class="button">Замовити послугу</a>
+        <button class="btn" data-open-modal>Замовити послугу</button>
       </section>
 
       <!-- Особливості -->
@@ -339,10 +339,17 @@
           </div>
         </div>
         <form class="js-speaker-form">
-          <label for="name">Ім'я</label>
-          <input type="text" name="user-name" id="name" />
-          <br />
-          <button type="submit">Залишити заявку</button>
+          <div class="footer-email-box">
+            <label for="email">Підпишіться на розсилку</label>
+            <br />
+            <input type="email" name="email" id="email" placeholder="E-mail" />
+          </div>
+          <button class="btn" type="submit">
+            Підписатись
+            <svg class="send">
+              <use href="./image/symbol-defs.svg#icon-icon-send"></use>
+            </svg>
+          </button>
         </form>
         <script>
           (() => {
@@ -357,5 +364,28 @@
         </script>
       </footer>
     </section>
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal"></div>
+    </div>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
   </body>
 </html>
