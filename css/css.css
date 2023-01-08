@@ -603,7 +603,7 @@ input[placeholder='E-mail'] {
   width: 528px;
   height: 581px;
   background-color: #fff;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .modal-inner {
@@ -622,14 +622,19 @@ input[placeholder='E-mail'] {
   margin-bottom: 20px;
 }
 
-.modal-input input {
+.form-input {
   padding: 12px 0px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 100%;
 }
 
-.modal-input input:hover {
+.form-input:hover {
+  border-color: #2196f3;
+}
+
+.form-field:focus {
   border-color: #2196f3;
 }
 
@@ -699,4 +704,39 @@ textarea[name='comment'] {
 
 .icon-close:hover {
   fill: #2196f3;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field:hover .form-icon {
+  fill: #2196f3;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: #2196f3;
+  transform: translateY(-35px);
+}
+
+.form-input:hover + .form-label {
+  color: #2196f3;
+}
+
+.form-icon {
+  position: absolute;
+  display: inline-block;
+  top: 12px;
+  left: 16px;
+  width: 19px;
+  height: 19px;
+}
+
+.form-label {
+  position: absolute;
+  top: 10px;
+  left: 42px;
+
+  transition: transform 250ms linear;
 }
