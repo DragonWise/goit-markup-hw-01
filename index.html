@@ -365,7 +365,27 @@
       </footer>
     </section>
     <div class="backdrop is-hidden" data-backdrop>
-      <div class="modal"></div>
+      <div class="modal">
+        <svg data-close-modal class="icon-close">
+          <use href="./image/symbol-defs1.svg#icon-close-black-18dp"></use>
+        </svg>
+        <form class="modal-inner">
+          <h3 class="modal-h3">Залиште свої дані, ми вам зателефонуємо</h3>
+          <div class="modal-input">
+            <input type="name" name="name" id="name" placeholder="Ім'я" />
+            <input type="tel" name="tel" id="tel" placeholder="Телефон" />
+            <input type="email" name="email" id="email" placeholder="Пошта" />
+            <textarea name="comment" id="comment" rows="5" placeholder="Коментар"></textarea>
+          </div>
+          <div class="topic">
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy"
+              >Погоджуюсь з розсилкою і приймаю <a href="">Умови договору</a>
+            </label>
+          </div>
+          <button  class="btn btn-modal" type="submit">Відправити</button>
+        </form>
+      </div>
     </div>
     <script>
       const refs = {

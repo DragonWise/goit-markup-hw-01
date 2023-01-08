@@ -56,6 +56,25 @@ body {
   transform: scaleX(1);
 }
 
+.contacts::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #2196f3;
+  border-radius: 2px;
+  transform: scaleY(0);
+
+  transition: transform 250ms linear;
+}
+
+.contacts:hover::after {
+  transform: scaleY(1);
+}
+
 /* container */
 .container.first {
   display: flex;
@@ -431,21 +450,25 @@ ul {
 
 /* Button */
 
-.button {
-  display: inline-block;
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
   color: #ffffff;
   background: #2196f3;
-  border: 1px solid black;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  padding: 10px;
-  width: 201px;
+  width: 200px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 /* address */
@@ -512,7 +535,7 @@ ul {
   margin-left: 94px;
 }
 
-input[type='email'] {
+.footer-email-box input[type='email'] {
   width: 358px;
   height: 50px;
   /* margin-top: 20px; */
@@ -546,27 +569,6 @@ input[placeholder='E-mail'] {
   align-content: space-between;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  width: 200px;
-  height: 50px;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .send {
   margin-left: 10px;
   width: 24px;
@@ -593,12 +595,108 @@ input[placeholder='E-mail'] {
 }
 
 .modal {
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 528px;
   height: 581px;
   background-color: #fff;
+  text-align: center;
+}
+
+.modal-inner {
+  margin: 40px 40px;
+}
+
+.modal-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 448px;
+  height: 324px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.modal-input input {
+  padding: 12px 0px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-input input:hover {
+  border-color: #2196f3;
+}
+
+.modal-input textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-input textarea:hover {
+  border-color: #2196f3;
+}
+
+.modal-h3 {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.topic a {
+  color: #2196f3;
+  text-decoration-line: underline;
+}
+
+.btn-modal {
+  margin-top: 30px;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 15px;
+  background: #212121;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+textarea[name='comment'] {
+  padding: 12px 16px;
+}
+
+.topic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topic input {
+  margin-right: 8px;
+}
+
+.icon-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.icon-close:hover {
+  fill: #2196f3;
 }
