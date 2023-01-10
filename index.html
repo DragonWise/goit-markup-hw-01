@@ -372,22 +372,24 @@
         <form class="modal-inner">
           <h3 class="modal-h3">Залиште свої дані, ми вам зателефонуємо</h3>
           <div class="modal-input">
-            <div class="form-field">
-              <input class="form-input" type="name" name="name" id="name" placeholder=" "/>
-              <label for="tel" class="form-label">Ім'я</label>
+            <!-- // варіант 1 -->
+            <label class="form-field">
+              <input class="form-input" type="name" name="name" placeholder=" " />
+              <span class="form-label">Ім'я</span>
               <svg class="form-icon">
                 <use href="./image/symbol-defs1.svg#icon-person-black-18dp"></use>
               </svg>
-            </div>
+            </label>
+            <!-- // варіант 2 (аналогічний по функціоналу, інший по запису) -->
             <div class="form-field">
-              <input class="form-input" type="tel" name="tel" id="tel" placeholder=" "/>
+              <input class="form-input" type="tel" name="tel" id="tel" placeholder=" " />
               <label for="tel" class="form-label">Телефон</label>
               <svg class="form-icon">
                 <use href="./image/symbol-defs1.svg#icon-phone-black-18dp"></use>
               </svg>
             </div>
             <div class="form-field">
-              <input class="form-input" type="email" name="email" id="email" placeholder=" "/>
+              <input class="form-input" type="email" name="email" id="email" placeholder=" " />
               <label for="tel" class="form-label">Пошта</label>
               <svg class="form-icon">
                 <use href="./image/symbol-defs1.svg#icon-email-black-18dp"></use>
@@ -395,12 +397,13 @@
             </div>
             <textarea name="comment" id="comment" rows="5" placeholder="Коментар"></textarea>
           </div>
-          <div class="topic">
-            <input type="checkbox" name="policy" id="policy" />
-            <label for="policy"
-              >Погоджуюсь з розсилкою і приймаю <a href="">Умови договору</a>
-            </label>
-          </div>
+
+          <label class="topic">
+            <input class="checkbox" type="checkbox" name="policy" />
+            <span class="icon"></span>
+            <span>Погоджуюсь з розсилкою і приймаю <a href="">Умови договору</a></span>
+          </label>
+
           <button class="btn btn-modal" type="submit">Відправити</button>
         </form>
       </div>
