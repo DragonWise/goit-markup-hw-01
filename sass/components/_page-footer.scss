@@ -1,0 +1,105 @@
+.address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 20px;
+}
+
+.address p {
+  color: #fff;
+  margin: 0px;
+}
+
+.address p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.address .link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.logo-footer {
+  fill: #ffffff;
+}
+
+.item-footer {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+  background-color: #2f303a;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+}
+
+.join {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+.join .title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.js-speaker-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  width: 570px;
+  height: 86px;
+  margin-left: 94px;
+}
+
+.footer-email-box input[type='email'] {
+  width: 358px;
+  height: 50px;
+  /* margin-top: 20px; */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #2f303a;
+}
+
+.footer-email-box {
+  height: 86px;
+  width: 358px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+label[for='email'] {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+input[placeholder='E-mail'] {
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 15px;
+}
+
+.send {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    fill: #ffffff;
+  }
+  
