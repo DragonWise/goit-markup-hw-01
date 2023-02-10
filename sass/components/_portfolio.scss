@@ -13,8 +13,9 @@
   justify-content: space-between;
 }
 
-.button-item:hover {
-  background: green;
+.button-item:hover .button {
+  background: var(--accent-colour);
+  color: #fff;
 }
 
 .button-item .button {
@@ -29,6 +30,17 @@
   border-radius: 4px;
   color: #212121;
   text-decoration: none;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+
+  transition: color, background 400ms linear;
 }
 
 .section.butt {

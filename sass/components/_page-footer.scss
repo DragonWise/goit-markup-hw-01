@@ -79,7 +79,8 @@
   align-content: space-between;
 }
 
-label[for='email'] {
+// label[for='email']
+.footer-email-box > label {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -96,10 +97,13 @@ input[placeholder='E-mail'] {
 }
 
 .send {
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    fill: #ffffff;
-  }
-  
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  fill: #ffffff;
+}
+
+.btn {
+  display: flex;
+}

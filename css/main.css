@@ -9,9 +9,6 @@ ul {
 }
 
 button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -626,7 +623,7 @@ body {
       align-content: space-between;
 }
 
-label[for=email] {
+.footer-email-box > label {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -647,6 +644,12 @@ input[placeholder=E-mail] {
   height: 24px;
   background-size: contain;
   fill: #ffffff;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .work-item {
@@ -828,8 +831,9 @@ input[placeholder=E-mail] {
           justify-content: space-between;
 }
 
-.button-item:hover {
-  background: green;
+.button-item:hover .button {
+  background: var(--accent-colour);
+  color: #fff;
 }
 
 .button-item .button {
@@ -850,6 +854,16 @@ input[placeholder=E-mail] {
   border-radius: 4px;
   color: #212121;
   text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  -webkit-transition: color, background 400ms linear;
+  transition: color, background 400ms linear;
 }
 
 .section.butt {
@@ -1070,12 +1084,60 @@ input[placeholder=E-mail] {
   width: 100%;
 }
 
-.form-input:hover {
-  border-color: #2196f3;
+.form-field {
+  position: relative;
 }
 
 .form-field:focus {
   border-color: #2196f3;
+}
+
+.form-field:hover .form-input {
+  border-color: #2196f3;
+}
+
+.form-field:hover .form-icon {
+  fill: #2196f3;
+}
+
+.form-field:hover .form-label {
+  color: #2196f3;
+}
+
+.form-input:not(:-moz-placeholder-shown) + .form-label {
+  color: #2196f3;
+  transform: translateY(-35px);
+}
+
+.form-input:not(:-ms-input-placeholder) + .form-label {
+  color: #2196f3;
+  transform: translateY(-35px);
+}
+
+.form-field:hover .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: #2196f3;
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.form-icon {
+  position: absolute;
+  display: inline-block;
+  top: 12px;
+  left: 16px;
+  width: 19px;
+  height: 19px;
+}
+
+.form-label {
+  position: absolute;
+  top: 10px;
+  left: 42px;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .modal-input textarea {
@@ -1112,6 +1174,7 @@ input[placeholder=E-mail] {
 
 .icon-close:hover {
   fill: #2196f3;
+  cursor: pointer;
 }
 
 .topic a {
@@ -1120,6 +1183,11 @@ input[placeholder=E-mail] {
 }
 
 .btn-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 30px;
 }
 
@@ -1163,52 +1231,4 @@ textarea[name=comment] {
   border-color: transparent;
   background-image: url(../image/icon\ check.svg);
   background-size: contain;
-}
-
-.form-field {
-  position: relative;
-}
-
-.form-field:hover .form-icon {
-  fill: #2196f3;
-}
-
-.form-input:not(:-moz-placeholder-shown) + .form-label {
-  color: #2196f3;
-  transform: translateY(-35px);
-}
-
-.form-input:not(:-ms-input-placeholder) + .form-label {
-  color: #2196f3;
-  transform: translateY(-35px);
-}
-
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  color: #2196f3;
-  -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
-}
-
-.form-input:hover + .form-label {
-  color: #2196f3;
-}
-
-.form-icon {
-  position: absolute;
-  display: inline-block;
-  top: 12px;
-  left: 16px;
-  width: 19px;
-  height: 19px;
-}
-
-.form-label {
-  position: absolute;
-  top: 10px;
-  left: 42px;
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }/*# sourceMappingURL=main.css.map */

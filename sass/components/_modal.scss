@@ -50,12 +50,47 @@
   width: 100%;
 }
 
-.form-input:hover {
-  border-color: #2196f3;
+.form-field {
+  position: relative;
 }
 
 .form-field:focus {
   border-color: #2196f3;
+}
+
+.form-field:hover .form-input {
+  border-color: #2196f3;
+}
+
+.form-field:hover .form-icon {
+  fill: #2196f3;
+}
+
+.form-field:hover .form-label {
+  color: #2196f3;
+}
+
+.form-field:hover .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: #2196f3;
+  transform: translateY(-35px);
+}
+
+.form-icon {
+  position: absolute;
+  display: inline-block;
+  top: 12px;
+  left: 16px;
+  width: 19px;
+  height: 19px;
+}
+
+.form-label {
+  position: absolute;
+  top: 10px;
+  left: 42px;
+
+  transition: transform 250ms linear;
 }
 
 .modal-input textarea {
@@ -93,6 +128,7 @@
 
 .icon-close:hover {
   fill: #2196f3;
+  cursor: pointer;
 }
 
 .topic a {
@@ -101,6 +137,9 @@
 }
 
 .btn-modal {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 30px;
 }
 
@@ -138,39 +177,4 @@ textarea[name='comment'] {
   border-color: transparent;
   background-image: url(../image/icon\ check.svg);
   background-size: contain;
-}
-
-.form-field {
-  position: relative;
-}
-
-.form-field:hover .form-icon {
-  fill: #2196f3;
-}
-
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  color: #2196f3;
-  transform: translateY(-35px);
-}
-
-.form-input:hover + .form-label {
-  color: #2196f3;
-}
-
-.form-icon {
-  position: absolute;
-  display: inline-block;
-  top: 12px;
-  left: 16px;
-  width: 19px;
-  height: 19px;
-}
-
-.form-label {
-  position: absolute;
-  top: 10px;
-  left: 42px;
-
-  transition: transform 250ms linear;
 }
