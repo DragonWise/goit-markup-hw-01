@@ -5,6 +5,7 @@
 }
 
 .page-header {
+  position: relative;
   background: #ffffff;
   border-bottom: 1px solid #ececec;
 }
@@ -15,7 +16,8 @@
 }
 
 .container.first {
-  display: flex;
+  // display: flex;
+
   height: 60px;
   align-items: center;
   margin-bottom: 0;
@@ -165,3 +167,50 @@
     background-position: center;
     background-repeat: no-repeat;
   } */
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.menu-button:hover .icon-close,
+.menu-button:hover .icon-menu {
+  fill: #2196f3;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background-color: palegoldenrod;
+  padding: 20px;
+  text-align: center;
+  font-style: 20px;
+
+  &.is-open {
+    display: block;
+  }
+}

@@ -1,14 +1,23 @@
-.work-item {
-  width: calc((100% - 60px) / 3);
+.work-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
-.note {
-  position: relative;
+.work-item {
+  width: calc((100% - 60px) / 3);
+    position: relative;
   width: 370px;
   height: 294px;
 }
 
-.note .title {
+.note {
+  // position: relative;
+  // width: 370px;
+  // height: 294px;
+}
+
+.work-item .title {
   position: absolute;
   bottom: 0;
   width: 370px;

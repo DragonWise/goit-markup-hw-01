@@ -36,14 +36,13 @@
 .footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
 }
 
 .join {
   width: 206px;
   height: 80px;
   margin-left: 70px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .join .title {
@@ -52,7 +51,6 @@
 }
 
 .js-speaker-form {
-  display: flex;
   justify-content: space-between;
   align-items: flex-end;
 
@@ -64,7 +62,6 @@
 .footer-email-box input[type='email'] {
   width: 358px;
   height: 50px;
-  /* margin-top: 20px; */
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -106,4 +103,108 @@ input[placeholder='E-mail'] {
 
 .btn {
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  footer.container {
+    width: 480px;
+    text-align: center;
+  }
+
+  .join {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .js-speaker-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+  .footer-email-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: auto;
+  }
+  .footer-email-box input[type='email'] {
+    margin-top: 20px;
+  }
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    height: 603px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer .container {
+    position: relative;
+    width: 768px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .footer-email-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: auto;
+    width: 450px;
+  }
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    height: 463px;
+  }
+
+  .container-adress {
+    position: absolute;
+    left: 76px;
+  }
+
+  .join {
+    position: absolute;
+    right: 89px;
+    top: 5px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .js-speaker-form {
+    margin-top: 187px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+
+  .footer-email-box input[type='email'] {
+    margin-top: 20px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .js-speaker-form {
+    display: flex;
+  }
+  .footer .container {
+    display: flex;
+  }
+  .footer-email-box {
+    padding-top: 12px;
+  }
 }

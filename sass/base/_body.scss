@@ -7,9 +7,15 @@ body {
   line-height: 1.71;
 }
 
+.section.section-features {
+  padding-top: 70px;
+}
+
 .section {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  // padding-top: 95px;
+  // padding-bottom: 95px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .section.no-padding {
@@ -19,19 +25,36 @@ body {
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 50px;
+
+  margin-bottom: 30px;
   color: var(--title-text-colour);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  // font-size: 36px;
+  // line-height: 1.17;
+  font-size: 28px;
+  line-height: 33px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
-  /* outline: 2px solid tomato; */
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
