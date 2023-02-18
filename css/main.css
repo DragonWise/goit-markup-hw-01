@@ -284,6 +284,9 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .section.section-features {
   padding-top: 70px;
@@ -555,19 +558,40 @@ body {
   display: none;
 }
 
-.menu-container {
-  display: none;
-  position: absolute;
-  top: 100%;
+.backdrop-menu {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: palegoldenrod;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 50px 30px;
+  overflow-y: scroll;
+}
+.backdrop-menu.is-hidden {
+  display: none;
+}
+
+.modal-menu {
   padding: 20px;
+  width: 100%;
+  background-color: #fff;
   text-align: center;
   font-style: 20px;
 }
-.menu-container.is-open {
+.modal-menu.modal-open {
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .modal-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 100%;
+  }
 }
 
 .hero {
@@ -620,6 +644,10 @@ body {
   }
 }
 
+.container-adress {
+  text-align: center;
+}
+
 .address {
   font-weight: 400;
   font-size: 14px;
@@ -650,6 +678,7 @@ body {
 }
 
 .footer {
+  height: 603px;
   background-color: #2f303a;
   padding-top: 0;
   padding-bottom: 0;
@@ -660,16 +689,10 @@ body {
   padding-bottom: 60px;
 }
 
-.join {
-  width: 206px;
-  height: 80px;
-  margin-left: 70px;
-  margin-top: 12px;
-}
-
 .join .title {
   color: #fff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .js-speaker-form {
@@ -679,31 +702,21 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 570px;
-  height: 86px;
+  width: 450px;
+  height: 156px;
   margin-left: 94px;
+  text-align: center;
 }
 
 .footer-email-box input[type=email] {
-  width: 358px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: #2f303a;
-}
-
-.footer-email-box {
-  height: 86px;
-  width: 358px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
 }
 
 .footer-email-box > label {
@@ -735,45 +748,61 @@ input[placeholder=E-mail] {
   display: flex;
 }
 
-@media screen and (max-width: 767px) {
-  footer.container {
-    width: 480px;
-    text-align: center;
-  }
-  .join {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
+.join {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
   .js-speaker-form {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .footer-email-box {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    height: auto;
-  }
-  .footer-email-box input[type=email] {
-    margin-top: 20px;
-  }
-  .btn {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .footer {
-    height: 603px;
+    padding-top: 12px;
   }
 }
-@media screen and (max-width: 1199px) {
-  .footer .container {
+.js-speaker-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.footer-email-box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.footer-email-box input[type=email] {
+  margin-top: 20px;
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  height: 603px;
+}
+
+@media screen and (min-width: 768px) {
+  footer.container {
     position: relative;
     width: 768px;
     text-align: center;
+    width: 768px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -801,8 +830,6 @@ input[placeholder=E-mail] {
     position: absolute;
     right: 89px;
     top: 5px;
-    margin-top: 60px;
-    margin-bottom: 60px;
   }
   .js-speaker-form {
     margin-top: 187px;
@@ -816,18 +843,62 @@ input[placeholder=E-mail] {
   }
 }
 @media screen and (min-width: 1200px) {
+  .footer {
+    height: 252px;
+    margin: 0;
+  }
+  .join {
+    position: static;
+    margin: 0;
+    width: 206px;
+    height: 80px;
+    margin-left: 70px;
+    margin-top: 12px;
+  }
+  .join .title {
+    text-align: left;
+  }
+  .container-adress {
+    position: static;
+    text-align: left;
+    width: 231px;
+  }
   .js-speaker-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    margin-top: 12px;
+    width: 570px;
+    height: 86px;
+    margin-left: 95px;
+    margin-right: 0;
   }
   .footer .container {
+    position: relative;
+    width: 1200px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .footer-email-box {
+    height: 86px;
+    width: 358px;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    text-align: left;
+    margin: 0;
   }
-  .footer-email-box {
-    padding-top: 12px;
+  .footer-email-box input[type=email] {
+    margin-top: 0px;
+    width: 358px;
+    height: 50px;
+  }
+  button.btn {
+    width: 200px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -854,10 +925,6 @@ input[placeholder=E-mail] {
   text-align: center;
   vertical-align: middle;
   background: rgba(47, 48, 58, 0.8);
-}
-
-.container-command {
-  margin: -15px;
 }
 
 .social {
@@ -908,7 +975,8 @@ input[placeholder=E-mail] {
 
 .feature-card {
   position: relative;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 482px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -995,6 +1063,7 @@ input[placeholder=E-mail] {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .feature-list {
@@ -1006,7 +1075,7 @@ input[placeholder=E-mail] {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
+    margin: 0px -15px;
   }
 }
 
@@ -1016,6 +1085,8 @@ input[placeholder=E-mail] {
 @media screen and (min-width: 768px) {
   .flex-element {
     width: 354px;
+    text-align: left;
+    margin: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1061,6 +1132,11 @@ input[placeholder=E-mail] {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    text-align: left;
+  }
 }
 
 .title-text {
@@ -1275,13 +1351,9 @@ input[placeholder=E-mail] {
   margin: -15px;
 }
 
-.container-clients {
-  margin: -15px;
-}
-
 @media screen and (max-width: 1199px) {
   .section-title {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 }
 

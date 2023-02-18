@@ -2,12 +2,13 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: -15px;
+    margin: 0px -15px;
   }
 }
 
@@ -16,6 +17,8 @@
 
   @media screen and (min-width: 768px) {
     width: 354px;
+    text-align: left;
+    margin: 15px;
   }
   @media screen and (min-width: 1200px) {
     width: 270px;
@@ -59,9 +62,18 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .title-text {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-group {
+  }
 }

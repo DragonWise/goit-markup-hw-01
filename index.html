@@ -38,7 +38,6 @@
               <use class="icon-close" href="./image/menu-close.svg#icon-close_40px"></use>
             </svg>
           </button>
-          <div class="menu-container" id="menu-container" data-menu>Контент меню</div>
           <ul class="site-nav list">
             <li class="item"><a href="" class="link studio">Студия</a></li>
             <li class="item"><a href="./portfolio.html" class="link portfolio">Портфолио</a></li>
@@ -68,6 +67,9 @@
     </header>
 
     <main>
+      <div class="container">
+        <button type="button" data-modal-open>Open</button>
+      </div>
       <!-- Герой -->
       <section class="hero">
         <h1 class="hero-title">
@@ -312,6 +314,32 @@
         </div>
       </section>
     </main>
+
+    <div class="backdrop-menu is-hidden" data-modal>
+      <div class="modal-menu">
+        <button type="button" data-modal-close>Close</button>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus amet dolor qui nihil
+          perferendis numquam molestias architecto. Dicta consectetur, quas hic sapiente possimus
+          aut cumque deleniti vel pariatur, delectus asperiores. Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Cupiditate officiis cumque eius temporibus harum ea optio,
+          tempora vel, nemo, vitae minima sunt ipsam alias quisquam enim ipsa voluptate nesciunt
+          repudiandae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus amet dolor
+          qui nihil perferendis numquam molestias architecto. Dicta consectetur, quas hic sapiente
+          possimus aut cumque deleniti vel pariatur, delectus asperiores. Lorem, ipsum dolor sit
+          amet consectetur adipisicing elit. Cupiditate officiis cumque eius temporibus harum ea
+          optio, tempora vel, nemo, vitae minima sunt ipsam alias quisquam enim ipsa voluptate
+          nesciunt repudiandae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+          amet dolor qui nihil perferendis numquam molestias architecto. Dicta consectetur, quas hic
+          sapiente possimus aut cumque deleniti vel pariatur, delectus asperiores. Lorem, ipsum
+          dolor sit amet consectetur adipisicing elit. Cupiditate officiis cumque eius temporibus
+          harum ea optio, tempora vel, nemo, vitae minima sunt ipsam alias quisquam enim ipsa
+          voluptate nesciunt repudiandae.
+        </p>
+      </div>
+    </div>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
     <!-- адреса -->
     <section class="section footer">
       <footer class="container">
@@ -438,7 +466,5 @@
         console.log('Это клик в бекдроп');
       }
     </script>
-    <script src="./js/menu.js"></script>
-    <script src="./js/modal.js"></script>
   </body>
 </html>

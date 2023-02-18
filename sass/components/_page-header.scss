@@ -197,20 +197,41 @@
   display: none;
 }
 
-.menu-container {
-  display: none;
-
-  position: absolute;
-  top: 100%;
+.backdrop-menu {
+  // content: '';
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 50px 30px;
 
-  background-color: palegoldenrod;
+  overflow-y: scroll;
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.modal-menu {
   padding: 20px;
+  width: 100%;
+  background-color: #fff;
   text-align: center;
   font-style: 20px;
 
-  &.is-open {
+    &.modal-open {
     display: block;
   }
+
+@media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 100%;
+}
+
 }
