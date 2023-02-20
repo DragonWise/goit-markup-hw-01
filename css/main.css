@@ -1154,10 +1154,12 @@ input[placeholder=E-mail] {
   text-decoration: none;
 }
 
-.container-button {
-  width: 611px;
-  height: 54px;
-  padding: 0;
+.feature-list.portf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .container-button .button-item {
@@ -1167,6 +1169,10 @@ input[placeholder=E-mail] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 8px;
+}
+.container-button .button-item:nth-child(1) {
+  margin-bottom: 15px;
 }
 
 .button-item:hover .button {
@@ -1215,19 +1221,14 @@ input[placeholder=E-mail] {
 }
 
 .work-block {
-  width: 370px;
   background-color: #fff;
   border: 1px solid #eeeeee;
   overflow: hidden;
 }
 
-.work-block:hover {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .work-block img {
   vertical-align: bottom;
+  width: 450px;
 }
 
 .work-block .section-name {
@@ -1258,21 +1259,32 @@ input[placeholder=E-mail] {
   color: #757575;
 }
 
-.work-item {
+.portf .work-item {
+  width: 450px;
+  height: 404px;
+}
+.portf .work-item:hover {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portf .work-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .section.example {
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 .note {
-  width: 322px;
-  height: 70px;
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  background-color: #fff;
 }
 
 .overlay-box {
