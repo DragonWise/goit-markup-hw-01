@@ -1154,12 +1154,26 @@ input[placeholder=E-mail] {
   text-decoration: none;
 }
 
-.feature-list.portf {
+.feature-list.portf-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .feature-list.portf-head {
+    width: 611px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list.portf-list {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .container-button .button-item {
@@ -1174,7 +1188,17 @@ input[placeholder=E-mail] {
 .container-button .button-item:nth-child(1) {
   margin-bottom: 15px;
 }
+@media screen and (min-width: 768px) {
+  .container-button .button-item {
+    margin-right: 0;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .container-button .button-item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
 .button-item:hover .button {
   background: var(--accent-colour);
   color: #fff;
@@ -1228,7 +1252,7 @@ input[placeholder=E-mail] {
 
 .work-block img {
   vertical-align: bottom;
-  width: 450px;
+  width: 100%;
 }
 
 .work-block .section-name {
@@ -1259,20 +1283,41 @@ input[placeholder=E-mail] {
   color: #757575;
 }
 
-.portf .work-item {
+.portf-list .work-item {
   width: 450px;
   height: 404px;
 }
-.portf .work-item:hover {
+@media screen and (min-width: 768px) {
+  .portf-list .work-item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portf-list .work-item {
+    width: 370px;
+  }
+}
+.portf-list .work-item:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portf .work-item:not(:last-child) {
+.portf-list .work-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .section.example {
   padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .section.example {
+    padding-top: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section.example {
+    padding-top: 35px;
+    padding-bottom: 94px;
+  }
 }
 
 .note {
@@ -1713,6 +1758,7 @@ textarea[name=comment] {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
+  z-index: 999;
 }
 
 .menu-container {
